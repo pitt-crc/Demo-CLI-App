@@ -37,11 +37,11 @@ def get_meta():
     return author, version, license_type
 
 
-author, version, license_type = get_meta()
+_author, _version, _license_type = get_meta()
 setup(
     name='tell-me-about',
     description='An example command line application written in Python',
-    version=version,
+    version=_version,
     packages=find_packages(),
     python_requires='>=3.9',
     entry_points="""
@@ -49,11 +49,11 @@ setup(
         tell-me=app.app_logic:App.execute
     """,
     install_requires=get_requirements(),
-    author=author,
+    author=_author,
     keyword='example, command-line, app',
     long_description=get_long_description(),
     long_description_content_type='text/markdown',
-    license=license_type,
+    license=_license_type,
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',

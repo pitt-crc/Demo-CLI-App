@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 
 
 class App(ArgumentParser):
-    """A demo command line application that echos given text."""
+    """A demo command line application that echos back given text"""
 
     def __init__(self):
         """Define command line arguments and help text"""
@@ -18,4 +18,4 @@ class App(ArgumentParser):
 
         app = cls()
         args = app.parse_args()
-        print(f'You told me: {args.text}')
+        print(f'I will tell you about: {args.text}')

@@ -4,8 +4,20 @@ from pathlib import Path
 
 from setuptools import setup, find_packages
 
-README_FILE = Path(__file__).parent / "README.md"
-README_TEXT = README_FILE.read_text()
+
+def get_long_description():
+    """Return a long description of tha parent package"""
+
+    readme_file = Path(__file__).parent / 'README.md'
+    return readme_file.read_text()
+
+
+def get_requirements():
+    """Return a list of package dependencies"""
+
+    requirements_file = Path(__file__).parent / 'requirements.txt'
+    return requirements_file.read_text().split()
+
 
 setup(
     name='tell-me-about',
@@ -13,9 +25,14 @@ setup(
     version='0.0.1',
     packages=find_packages(),
     python_requires='>=3.9',
+    entry_points="""
+        [console_scripts]
+        tell-me=app.app_logic:App.execute
+    """,
+    install_requires=get_requirements(),
     author='Pitt Center for Research Computing',
     keyword='example, command-line, app',
-    long_description=README_TEXT,
+    long_description=get_long_description(),
     long_description_content_type='text/markdown',
     license='MIT',
     url='https://github.com/CITGuru/cver',

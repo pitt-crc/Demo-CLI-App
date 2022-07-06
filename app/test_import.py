@@ -12,8 +12,8 @@ class TestImport(ArgumentParser):
 
 
         import pandas
-        print('Pandas imported')
+        print('Pandas was imported successfully!')
         import datasets
-        print('Datasets imported')
+        print('Datasets was imported successfully!')
         import matplotlib
-        print('Matplotlib imported')
+        print('Matplotlib was imported successfully!')

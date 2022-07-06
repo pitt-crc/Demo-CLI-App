@@ -45,11 +45,11 @@ def get_meta():
 
 _author, _version, _license_type = get_meta()
 setup(
-    name='tell-me-about',
+    name='demo-apps',
     description='An example command line application written in Python',
     version=_version,
     packages=find_packages(),
-    python_requires='>=3.9',
+    python_requires='>=3.6',
     entry_points="""
         [console_scripts]
         tell-me=app.tell_me:TellMe.execute

@@ -52,7 +52,8 @@ setup(
     python_requires='>=3.9',
     entry_points="""
         [console_scripts]
-        tell-me=app.app_logic:App.execute
+        tell-me=app.tell_me:TellMe.execute
+        test-import=app.test_import:TestImport.execute
     """,
     install_requires=get_requirements(),
     author=_author,

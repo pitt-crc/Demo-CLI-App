@@ -22,6 +22,12 @@ def get_requirements():
 
 
 def get_meta():
+    """Return package metadata including the:
+        - author
+        - version
+        - license
+    """
+
     init_path = Path(__file__).resolve().parent / 'app/__init__.py'
     init_text = init_path.read_text()
 

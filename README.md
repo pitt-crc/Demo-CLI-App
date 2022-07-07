@@ -18,3 +18,8 @@ pipx install .
 tell-me asdf
 > I will tell you about: asdf
 ```
+
+
+## Installing for all users
+
+`PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx git+https://github.com/pitt-crc/Demo-CLI-App.git`

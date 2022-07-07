@@ -17,3 +17,5 @@ class TestImport(ArgumentParser):
         print('Datasets was imported successfully!')
         import matplotlib
         print('Matplotlib was imported successfully!')
+        import powerlibs
+        print('Powerlibs was imported successfully!')
